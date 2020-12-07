@@ -12,7 +12,7 @@ class PartidaBolos(unittest.TestCase):
 		partida = Partida()
 		ronda = [(0,0),(0,1),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
 		resultado = partida.calcularResultado(ronda)
-		self.assertEqual(resultado,2)
+		self.assertEqual(resultado,1)
 
 	def test_partida_varios_puntos(self):
 		partida = Partida()

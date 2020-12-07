@@ -77,6 +77,9 @@ class PartidaBolos(unittest.TestCase):
 		ronda = [(0,0),(10,3),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
 		resultado = partida.calcularResultado(ronda)
 		self.assertFalse(resultado,13)
-
-
+	def test_partida_con_mas_rondas_no_validas(self):
+		partida = Partida()
+		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(10,0),(10,0),(5,2)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertFalse(resultado,44)
 

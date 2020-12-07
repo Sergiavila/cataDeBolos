@@ -12,11 +12,17 @@ class PartidaBolos(unittest.TestCase):
 		partida = Partida()
 		ronda = [(0,0),(0,1),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
 		resultado = partida.calcularResultado(ronda)
-		self.assertEqual(resultado,1)
+		self.assertEqual(resultado,2)
 
 	def test_partida_varios_puntos(self):
 		partida = Partida()
 		ronda = [(3,2),(0,1),(0,5),(6,1),(2,3),(4,5),(6,0),(0,0),(0,0),(0,0)]
 		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,38)
+
+	def test_partida_con_strike(self):
+		partida = Partida()
+		ronda = [(3,2),(0,1),(0,5),(6,1),(2,3),(4,5),(6,0),(0,0),(10,0),(3,0)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertEqual(resultado,54)
 

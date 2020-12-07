@@ -24,3 +24,11 @@ class Partida():
 			return suma
 		except:
 			print ("Solo se permiten introducir 11 rondas")
+	
+	def main():
+		partida = []
+		for x in range(0,10):
+			ronda = input("Introduzca puntuacion")
+			ronda.append(puntuacion)
+		resultado = ronda.calcularResultado(partida)
+		print (resultado)

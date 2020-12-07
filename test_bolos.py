@@ -1,8 +1,10 @@
 import unittest
 
-from bolos  import Partida
+from bolos import Partida
 class PartidaBolos(unittest.TestCase):
-	def test_dummy(self):
+	def test_partida_simple(self):
 		partida = Partida()
-		resultado = partida.calcularResultado()
+		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,0)
+

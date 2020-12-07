@@ -72,6 +72,11 @@ class PartidaBolos(unittest.TestCase):
 		ronda = [(0,0),(0,0),(0,0),(10,0),(5,2),(0,0),(3,7),(10,0),(5,0),(10,0),(8,2)]
 		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,94)
+	def test_una_tirada_tiene_mas_de_10_puntos(self):	
+		partida = Partida()
+		ronda = [(0,0),(10,3),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertFalse(resultado,13)
 
 
 

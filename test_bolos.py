@@ -38,3 +38,9 @@ class PartidaBolos(unittest.TestCase):
 		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,87)
 
+	def test_partida_con_spare(self):
+		partida = Partida()
+		ronda = [(0,0),(9,1),(5,1),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertEqual(resultado,21)
+

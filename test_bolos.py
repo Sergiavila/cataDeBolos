@@ -32,3 +32,9 @@ class PartidaBolos(unittest.TestCase):
 		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,62)
 
+	def test_partida_con_strike_ronda_extra(self):
+		partida = Partida()
+		ronda = [(3,2),(0,1),(0,5),(6,1),(0,0),(4,5),(6,0),(10,0),(5,3),(10,0),(5,4)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertEqual(resultado,87)
+

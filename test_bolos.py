@@ -8,3 +8,9 @@ class PartidaBolos(unittest.TestCase):
 		resultado = partida.calcularResultado(ronda)
 		self.assertEqual(resultado,0)
 
+	def test_partida_1_punto(self):
+		partida = Partida()
+		ronda = [(0,0),(0,1),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		resultado = partida.calcularResultado(ronda)
+		self.assertEqual(resultado,1)
+

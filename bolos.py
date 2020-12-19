@@ -26,11 +26,11 @@ class Partida():
 			print ("Solo se permiten introducir 11 rondas")
 	
 
-	if __name__ == "__main__":
-		main()
-			partida = []
-			for x in range(0,10):
-				ronda = input("Introduzca puntuacion")
-				ronda.append(puntuacion)
-			resultado = ronda.calcularResultado(partida)
-			print (resultado)
+if __name__ == "__main__":
+	main()
+	partida = []
+	for x in range (0,10):
+		ronda = input("Introduzca puntuacion")
+		ronda.append(puntuacion)
+	resultado = ronda.calcularResultado(partida)
+	print (resultado)
